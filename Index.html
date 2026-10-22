@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mein Suchprojekt</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, sans-serif;
+      background: #f2d4b8;
+      color: #38291e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+    }
+
+    main {
+      width: min(100%, 38rem);
+      padding: clamp(2rem, 7vw, 4rem);
+      border-radius: 1rem;
+      background: #fffaf5;
+      box-shadow: 0 1rem 2.5rem rgb(75 45 20 / 12%);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 1.75rem;
+      font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    form {
+      display: flex;
+      gap: 0.65rem;
+    }
+
+    input,
+    button {
+      min-height: 3rem;
+      border: 1px solid #c9a17e;
+      border-radius: 0.5rem;
+      font: inherit;
+    }
+
+    input {
+      min-width: 0;
+      flex: 1;
+      padding: 0 0.9rem;
+      background: white;
+    }
+
+    button {
+      padding: 0 1.1rem;
+      border-color: #a85522;
+      background: #a85522;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #87431c;
+    }
+
+    input:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #6e391b;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 28rem) {
+      form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mein Suchprojekt</h1>
+    <form action="https://duckduckgo.com/" method="get" role="search">
+      <label for="search-query" hidden>Suchbegriff</label>
+      <input id="search-query" name="q" type="search" placeholder="Was möchtest du suchen?" required>
+      <button type="submit">Suchen</button>
+    </form>
+  </main>
+</body>
+</html>
